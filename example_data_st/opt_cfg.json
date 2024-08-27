@@ -1,0 +1,26 @@
+{
+  "input_names": [ "x", "y" ],
+  "target_names": [ "t0" ],
+  "constraints_raw": [],
+  "bounds": [
+    {
+      "bound": "x",
+      "min": 0,
+      "max": 10
+    },
+    {
+      "bound": "y",
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "target_treatment": {
+    "t0": "maximize"
+  },
+  "fix_n": {
+    "values": {},
+    "n": 0
+  },
+  "num_samples": 5,
+  "fix_n_temperature": 25
+}

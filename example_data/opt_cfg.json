@@ -1,0 +1,72 @@
+{
+  "input_names": [
+    "Cr",
+    "Fe",
+    "Mg",
+    "Mn"
+  ],
+  "target_names": [
+    "bar",
+    "foo",
+    "baz"
+  ],
+  "constraints_raw": [
+    {
+      "normalized_constraint": "-(ln(Cr) * Cr + ln(Mn) * Mn + ln(Fe) * Fe + ln(Mg) * Mg) > 1.0",
+      "nonlinear": true
+    },
+    {
+      "normalized_constraint": "Cr, Mn, Fe, Mg = 1.0",
+      "nonlinear": false
+    }
+  ],
+  "bounds": [
+    {
+      "bound": "Cr",
+      "min": 0.2,
+      "max": 0.5
+    },
+    {
+      "bound": "Fe",
+      "min": 0.2,
+      "max": 0.5
+    },
+    {
+      "bound": "Mg",
+      "min": 0.2,
+      "max": 0.5
+    },
+    {
+      "bound": "Mn",
+      "min": 0.2,
+      "max": 0.5
+    }
+  ],
+  "target_treatment": {
+    "bar": "maximize",
+    "foo": "minimize",
+    "baz": "minimize"
+  },
+  "fix_n": {
+    "values": [
+      [
+        "Cr",
+        0
+      ],
+      [
+        "Mn",
+        0
+      ],
+      [
+        "Fe",
+        0
+      ],
+      [
+        "Mg",
+        0
+      ]
+    ],
+    "n": 1
+  },
+  "num_samples": 5
+}
